@@ -1,0 +1,115 @@
+/* 
+key: <element> = <class>
+------------------------
+main = borderBox 
+section = container
+div = mainTitleContainer
+h1 = mainTitle
+div = subTitleContainer
+h2 = subTitle
+form = gameInstructions
+h3 = gameExplanation
+input = gameInput
+button = submitButton
+div = GuessesArrayContainer
+span = GuessesArrayCell
+------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Pirata+One&display=swap');
+html {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/I/81tpL3GU2DL._SL1500_.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.borderBox { 
+    width:40%; 
+    height:35%;
+    margin-left:auto; 
+    margin-right:auto; 
+    margin-top:15%;
+    border-radius:15px; 
+    border:2px solid grey;
+    background-color:lightgray; 
+    opacity: .89;
+}
+
+.container {
+    width:85%;
+    height:85%;
+    margin:auto; 
+    padding:20px; 
+}
+
+.mainTitleContainer {
+    width:90%; 
+    height:30%;
+    text-align: center; 
+}
+
+.mainTitle {
+    font-family: 'Pirata One', cursive;
+    font-size:26pt; 
+    font-weight: 400; 
+}
+
+.subTitleContainer {
+    width:100%; 
+    height:12.5%;
+    margin-top:auto;  
+    margin-bottom:auto;  
+    background-color: #243489; 
+}
+
+.subTitle {
+    font-size:16pt; 
+    font-weight: 300; 
+    margin-left:15px; 
+    display: inline;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:white; 
+}
+
+.gameInstructions {
+    width:100%; 
+    height:12.5%; 
+    display: inline-block;
+    text-align:justify; 
+}
+
+.gameExplanation {
+    font-size:16pt; 
+    font-weight: 200;
+    color:black; 
+}
+
+.gameInput {
+    width:7.5%; 
+    height: 100%; 
+    border:1px solid lightgray; 
+    font-size: 16pt;
+}
+
+.submitButton { 
+    font-size: 16pt; 
+    border-radius:10px;
+    display:inline;
+}
+
+.GuessesArrayContainer {
+    width:80%; 
+    height:12.5%; 
+    display: inline-flex;
+    justify-content: center; 
+}
+
+.GuessesArrayCell {
+    width:25px; 
+    height:25px; 
+    border:1px solid #243489; 
+    background-color:white;  
+}
+
+

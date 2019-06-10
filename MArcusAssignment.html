@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marcus Ta, Battleship Demo</title>
+<link href="MarcusBattleShip.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src = './newAssignment.js'></script> 
+
+
+</head>
+    <body>
+        <main class = "borderBox" name="main area box"> 
+            <section class="container" role="region">
+                <div class=mainTitleContainer role="region">
+                    <h1 class = "mainTitle"> Mini Battleship </h1>
+                </div>
+                <div class="subTitleContainer" role="subTitleAreaBox">
+                    <h2 class="subTitle"> Play if ye dare...</h2> 
+                </div>
+                <form class="gameInstructions" role="form">
+                    <h3 class="gameExplanation">Yarrr place yee guess here.... 
+                        <input class="gameInput" id = "gameInput" aria-label="Place your guess here"></input> 
+                        <button class="submitButton" id = "submitButton">Guess Away</button>
+                    </h3>
+                </form>
+                <div class="GuessesArrayContainer" id="GuessesArrayContainer" role="region">
+
+                </div>
+                <div class="gameExplanation" id = "MessageToUser" role="text"></div>
+                <div class="gameExplanation" id = "guessesMessageToUser" role="text"></div>
+            </section>
+        </main>
+        <script> 
+            document.getElementById("submitButton").addEventListener("click", function(event) {
+                console.log(event); 
+                event.preventDefault();
+                loc = document.getElementById("gameInput").value; 
+                console.log('loc is = ', loc); 
+                document.getElementById("gameInput").value = "";
+                initialStartingPoint(); 
+        } );
+        </script>
+    </body>
+</html>
+
+<script>
+        window.addEventListener("load", function(event) {   
+            var TheInnerHTML ="";
+            for(var i=0; i<20; i++) {           
+                TheInnerHTML += `<span class="GuessesArrayCell" role="cell" value = "" id = ${i} ></span>`;
+            }
+            document.getElementById("GuessesArrayContainer").innerHTML = TheInnerHTML;
+            
+        });
+    
+        // function buttonClickHandler(event) {
+        //     console.log(event); 
+        //     event.defaultPrevented; 
+        // }
+
+
+    
+      
+    </script>
+
